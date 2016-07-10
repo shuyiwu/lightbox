@@ -1,0 +1,24 @@
+<section class="content" ng-controller="HomeController">
+  <div class='lightBox' ng-show='lightBoxShow'>
+    <div class='lightBox-overlay' ng-click='hideModal()'></div>
+    <div class='lightBox-dialog'>
+      <div class='lightBox-dialog-title'>
+        Progress
+        <div class='lightBox-close' ng-click='hideModal()'>
+          <img src='../images/close-icon-17.png' title='close'/>
+        </div>
+      </div>
+      <div class='lightBox-dialog-content'>
+        <div class='progressBar-box'>
+          <div class='progressBar {{completedStyle}}' style='width:{{progressValue}}%;'></div>
+        </div>
+        <div ng-show="!isCompleted()" class='progressBar-label'>Progress {{progressValue}}%</div>
+        <div ng-show="isCompleted()" class='progressBar-label'>
+          This task is 100% completed
+          <img src='../images/tick-icon.png' />
+        </div>
+      </div>
+    </div>
+  </div>
+  <button ng-click="loadLightBox()">reload light box</button>
+</section>
