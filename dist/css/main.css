@@ -2,7 +2,8 @@ body {
   background: white;
   text-align: center;
   padding: 20px;
-  color: #999999; }
+  color: #999999;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 footer {
   font-size: 0.8em; }
@@ -37,7 +38,7 @@ section.content {
     color: #CDCDCD;
     text-align: left;
     vertical-align: middle;
-    height: 40px;
+    height: 30px;
     padding: 5px 10px; }
     .lightBox-dialog .lightBox-dialog-title .lightBox-close {
       text-align: right;
@@ -49,7 +50,7 @@ section.content {
   .lightBox-dialog .lightBox-dialog-content {
     height: 120px; }
     .lightBox-dialog .lightBox-dialog-content .progressBar-box {
-      margin: 30px auto; }
+      margin: 25px auto; }
 
 .lightBox-dialog-content img {
   width: 16px;

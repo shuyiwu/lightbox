@@ -4,7 +4,7 @@
   "description": "AngularJS based light box with progression bar demo",
   "license": "MIT",
   "main": "app/index.js",
-  "repository": "",
+  "repository": "https://github.com/shuyiwu/lightbox.git",
   "author": {
     "name": "Shuyi Wu",
     "email": "shuyi_wu@hotmail.com"

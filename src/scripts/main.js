@@ -4,15 +4,11 @@ require.config({
 		routes: './routes',
 		text: '../lib/text',
 		angular: '../lib/angular',
-		angularrouter: '../lib/angular-route',
-		jquery: '../lib/jquery',
-		bootstrap: '../lib/bootstrap'
+		angularrouter: '../lib/angular-route'
 	}
 });
-//window.app = {};
-require(['angular', 'jquery'], function() {
-	require(['angularrouter', 'bootstrap'], function() {
-	//	window.app = angular.module('App', ['ngRoute']);
+require(['angular'], function() {
+	require(['angularrouter'], function() {
     angular.module('lightbox', ['ngRoute']);
 		require(['router'], function() {
 			angular.bootstrap(document, ['lightbox']);
