@@ -26,19 +26,24 @@ section.content {
   position: absolute;
   left: 50%;
   top: 50%;
-  width: 320px;
+  width: 400px;
   height: 160px;
   margin-top: -80px;
-  margin-left: -160px;
+  margin-left: -200px;
   font-size: 20px;
   background-color: white;
   border: 1px solid #999999; }
+  @media screen and (max-width: 400px) {
+    .lightBox-dialog {
+      width: 96%;
+      margin-left: -48%; } }
   .lightBox-dialog .lightBox-dialog-title {
     background-color: #666666;
     color: #CDCDCD;
     text-align: left;
     vertical-align: middle;
-    height: 30px;
+    height: 28px;
+    line-height: 28px;
     padding: 5px 10px; }
     .lightBox-dialog .lightBox-dialog-title .lightBox-close {
       text-align: right;
@@ -59,7 +64,7 @@ section.content {
 
 .progressBar-box {
   border: 1px solid darkgrey;
-  height: 20px;
+  height: 18px;
   width: 200px; }
 
 .progressBar {
