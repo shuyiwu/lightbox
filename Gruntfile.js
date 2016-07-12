@@ -6,6 +6,7 @@ module.exports = function(grunt) {
 	require('./grunt/clean')(grunt);
 	require('./grunt/copy')(grunt);
 	require('./grunt/merge')(grunt);
+  require('./grunt/mocha')(grunt);
 	require('./grunt/sass')(grunt);
 	require('./grunt/uglify')(grunt);
 	require('./grunt/connect')(grunt);
@@ -15,12 +16,15 @@ module.exports = function(grunt) {
 	require('./grunt/clean-dist')(grunt);
 	grunt.registerTask('default', ['start']);
 	grunt.registerTask('start', function() {
-		grunt.task.run(['clean:dist', 'jshint', 'uglify', 'sass', 'copy', 'clean-dist', 'connect', 'open', 'watch']);
+		grunt.task.run(['clean:dist', 'jshint','uglify', 'sass', 'copy',  'mocha', 'clean-dist', 'connect', 'open', 'watch']);
 	});
 	grunt.registerTask('build', function() {
-		grunt.task.run(['clean:dist', 'jshint', 'uglify', 'sass', 'copy', 'clean-dist']);
+		grunt.task.run(['clean:dist', 'jshint', 'uglify', 'sass', 'copy', 'mocha', 'clean-dist']);
 	});
 	grunt.registerTask('rebuild', function() {
 		grunt.task.run(['clean:dist', 'uglify', 'sass', 'copy', 'clean-dist']);
 	});
+  grunt.registerTask('test', function(){
+    grunt.task.run(['mocha']);
+  });
 };
