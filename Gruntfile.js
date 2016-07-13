@@ -27,4 +27,7 @@ module.exports = function(grunt) {
   grunt.registerTask('test', function(){
     grunt.task.run(['mocha']);
   });
+  grunt.registerTask('run', function(){
+    grunt.task.run(['connect', 'open', 'watch']);
+  });
 };
