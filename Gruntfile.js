@@ -28,6 +28,6 @@ module.exports = function(grunt) {
     grunt.task.run(['mocha']);
   });
   grunt.registerTask('run', function(){
-    grunt.task.run(['connect', 'open', 'watch']);
+    grunt.task.run(['clean:dist', 'jshint','uglify', 'copy',  'mocha', 'clean-dist', 'connect', 'open', 'watch']);
   });
 };
