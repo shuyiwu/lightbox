@@ -16,6 +16,10 @@ define([], function() {
       });
       $scope.loadLightBox = function(){
           $scope.lightBoxShow = true;
+          if(!!stop){
+            $interval.cancel(stop);
+            stop = undefined;
+          }
           $scope.startProgress($scope.box);
       };
       $scope.hideModal = function() {
